@@ -1,8 +1,12 @@
+import TableContainer from './containers/TableContainer';
 function App() {
   return (
-    <div>
-      <h1>Hola Mundo!</h1>
-    </div>
+    <main>
+      <header>
+        <h1>Condiciones Atmosféricas 2017-2018</h1>
+      </header>
+      <TableContainer />
+    </main>
   );
 }
 
