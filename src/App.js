@@ -1,11 +1,23 @@
+import { useState, useEffect } from 'react';
+import Header from './components/Header';
 import TableContainer from './containers/TableContainer';
+import getDataAPI from './services/getDataAPI.js';
+
+function GetState(_URL) {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getDataAPI(_URL).then((initialState) => setData(initialState));
+  }, [_URL]);
+
+  return data;
+}
 function App() {
+  const data = GetState('https://api.datos.gob.mx/v1/condiciones-atmosfericas');
   return (
     <main>
-      <header>
-        <h1>Condiciones Atmosféricas 2017-2018</h1>
-      </header>
-      <TableContainer />
+      <Header />
+      <TableContainer data={data} />
     </main>
   );
 }
