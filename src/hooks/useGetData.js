@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import getDataAPI from '../services/getDataAPI';
 
-function GetData(_URL) {
+function useGetData(nextBlockData) {
+  const _URL = `https://api.datos.gob.mx/v1/condiciones-atmosfericas?page=${nextBlockData}`;
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -10,4 +11,4 @@ function GetData(_URL) {
 
   return data;
 }
-export default GetData;
+export default useGetData;

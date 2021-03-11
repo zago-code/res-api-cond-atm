@@ -12,6 +12,7 @@ function TableHeader() {
         <th>Húmedad relativa (%)</th>
         <th>Velocidad del viento (Km/h)</th>
         <th>Clima</th>
+        <th>Fecha y hora</th>
       </tr>
     </thead>
   );
