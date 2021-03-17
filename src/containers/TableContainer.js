@@ -1,11 +1,12 @@
 import React from 'react';
 import Table from '../components/Table';
+import { Container } from '../styled/styles';
 
 function TableContainer() {
   return (
-    <div>
+    <Container>
       <Table />
-    </div>
+    </Container>
   );
 }
 

@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import { ListPages } from '../styled/styles';
 
 function Pagination(props) {
   const { prev, next, page, maxPage, block, onNext, onPrev } = props;
   return (
     <nav>
-      <ul>
+      <ListPages>
         <li>
           <span>{`DataBlock: ${block}`}</span>
         </li>
@@ -34,7 +34,7 @@ function Pagination(props) {
             <span>next-block</span>
           </a>
         </li>
-      </ul>
+      </ListPages>
     </nav>
   );
 }

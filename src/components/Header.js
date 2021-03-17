@@ -1,8 +1,9 @@
+import { Title } from '../styled/styles';
 function Header() {
   return (
-    <header>
-      <h1>Condiciones Atmosféricas 2017-2018</h1>
-    </header>
+    <Title>
+      <h1>Histórico de Condiciones Atmosféricas en México</h1>
+    </Title>
   );
 }
 

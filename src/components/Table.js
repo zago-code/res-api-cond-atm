@@ -4,6 +4,7 @@ import TableHeader from './TableHeader';
 import Pagination from './Pagination';
 import useGetData from '../hooks/useGetData';
 import usePagination from '../hooks/usePagination';
+import { TableStyles } from '../styled/styles';
 
 function Table() {
   const [blockData, setBlockData] = useState(1);
@@ -36,10 +37,10 @@ function Table() {
 
   return (
     <>
-      <table>
+      <TableStyles>
         <TableHeader />
         <TableRows data={data} />
-      </table>
+      </TableStyles>
       <Pagination
         page={dataFilter.currentPage}
         maxPage={dataFilter.maxPage}
